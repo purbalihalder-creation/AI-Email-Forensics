@@ -1,0 +1,30 @@
+From: Microsoft Support <support@m1crosoft-security.com>
+To: victim@example.com
+Reply-To: attacker@gmail.com
+Subject: URGENT: Your account will be suspended
+
+Received: from mail.example.net (mail.example.net [203.0.113.10])
+    by victim.example.com
+Received: from unknown-host (185.220.101.10)
+    by mail.example.net
+
+Authentication-Results: spf=fail;
+dkim=fail;
+dmarc=fail;
+
+Hello,
+
+URGENT!
+
+Your account has detected unusual activity.
+
+Your account will be suspended within 24 hours.
+
+Please verify your account immediately:
+
+https://m1crosoft-security.example/login
+
+Please provide your password to verify your identity.
+
+Regards,
+Microsoft Security Team
