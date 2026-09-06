@@ -1,47 +1,41 @@
 import re
-from urllib.parse import urlparse
+import ipaddress
 
 
-IP_REGEX = r"\b(?:\d{1,3}\.){3}\d{1,3}\b"
+def extract_ips(text):
 
+    if not isinstance(text, str):
+        return []
 
-def extract_ips(headers):
+    candidates = re.findall(
+        r'\b(?:\d{1,3}\.){3}\d{1,3}\b',
+        text
+    )
 
-    text = ""
+    valid_ips = []
 
-    for key, value in headers.items():
-
-        if key.lower() == "received":
-            text += str(value) + "\n"
-
-    ips = re.findall(IP_REGEX, text)
-
-    return list(dict.fromkeys(ips))
-
-
-def extract_urls(body):
-
-    url_regex = r'https?://[^\s<>"\']+'
-
-    urls = re.findall(url_regex, body)
-
-    return list(dict.fromkeys(urls))
-
-
-def extract_domains(urls):
-
-    domains = []
-
-    for url in urls:
+    for ip in candidates:
 
         try:
+            ipaddress.ip_address(ip)
 
-            parsed = urlparse(url)
+            if ip not in valid_ips:
+                valid_ips.append(ip)
 
-            if parsed.hostname:
-                domains.append(parsed.hostname)
-
-        except Exception:
+        except ValueError:
             pass
 
-    return list(dict.fromkeys(domains))
+    return valid_ips
+
+
+def extract_urls(text):
+
+    if not isinstance(text, str):
+        return []
+
+    urls = re.findall(
+        r'https?://[^\s<>"\']+',
+        text
+    )
+
+    return list(dict.fromkeys(urls))

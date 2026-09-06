@@ -1,16 +1,17 @@
+Return-Path: <support@m1crosoft-security.com>
+Received: from mail.m1crosoft-security.com (mail.m1crosoft-security.com [8.8.8.8])
+    by mail.victim.example with ESMTP id ABC123
+    Tue, 01 Sep 2026 10:29:50 +0530
+Received: from unknown-host (unknown-host [1.1.1.1])
+    by mail.m1crosoft-security.com with ESMTP id XYZ456
+    Tue, 01 Sep 2026 10:29:40 +0530
 From: Microsoft Support <support@m1crosoft-security.com>
 To: victim@example.com
 Reply-To: attacker@gmail.com
 Subject: URGENT: Your account will be suspended
-
-Received: from mail.example.net (mail.example.net [203.0.113.10])
-    by victim.example.com
-Received: from unknown-host (185.220.101.10)
-    by mail.example.net
-
-Authentication-Results: spf=fail;
-dkim=fail;
-dmarc=fail;
+Message-ID: <abc123@m1crosoft-security.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="UTF-8"
 
 Hello,
 
@@ -20,11 +21,6 @@ Your account has detected unusual activity.
 
 Your account will be suspended within 24 hours.
 
-Please verify your account immediately:
+Please verify your account immediately.
 
 https://m1crosoft-security.example/login
-
-Please provide your password to verify your identity.
-
-Regards,
-Microsoft Security Team

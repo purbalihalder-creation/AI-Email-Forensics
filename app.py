@@ -1,5 +1,6 @@
 import os
 import tempfile
+from urllib.parse import urlparse
 
 import streamlit as st
 import pandas as pd
@@ -7,11 +8,7 @@ import pandas as pd
 from email_parser import parse_email
 from header_analyzer import analyze_headers
 
-from ioc_extractor import (
-    extract_ips,
-    extract_urls,
-    extract_domains
-)
+from ioc_extractor import extract_ips, extract_urls
 
 from threat_detector import (
     analyze_content,
@@ -34,6 +31,20 @@ from database import (
 from report_generator import (
     generate_report
 )
+
+
+def extract_domains(urls):
+    """Extract unique hostnames from a collection of URLs."""
+    domains = []
+
+    for url in urls or []:
+        parsed_url = urlparse(url if "://" in url else f"//{url}")
+        hostname = parsed_url.hostname
+
+        if hostname and hostname not in domains:
+            domains.append(hostname)
+
+    return domains
 
 
 st.set_page_config(
@@ -78,7 +89,12 @@ if uploaded_file:
     email_data = parse_email(
         temp_path
     )
+    # Extract IOCs from email headers and body
+    ips = extract_ips(email_data["headers_text"])
 
+    urls = extract_urls(
+    email_data["headers_text"] + "\n" + email_data["body"]
+)
 
     # Header analysis
 
@@ -90,8 +106,8 @@ if uploaded_file:
     # IOC extraction
 
     ips = extract_ips(
-        email_data["headers"]
-    )
+    email_data["headers_text"]
+)
 
     urls = extract_urls(
         email_data["body"]
@@ -311,31 +327,19 @@ if uploaded_file:
 
     # Geolocation
 
-    st.header(
-        "🌍 IP Geolocation"
-    )
-
+    st.header("🌍 IP Geolocation")
 
     geo_results = []
 
+    if ips:
 
-    for ip in ips:
+        for ip in ips:
+            geo_results.append(geolocate_ip(ip))
 
-        result = geolocate_ip(ip)
+        st.dataframe(geo_results, use_container_width=True)
 
-        geo_results.append(result)
-
-
-    if geo_results:
-
-        geo_df = pd.DataFrame(
-            geo_results
-        )
-
-        st.dataframe(
-            geo_df,
-            use_container_width=True
-        )
+    else:
+        st.info("No IP addresses available for geolocation.")
 
 
     # Threat reasons
