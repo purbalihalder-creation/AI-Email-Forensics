@@ -1,0 +1,234 @@
+Delivered-To: purbalihalder@gmail.com
+Received: by 2002:a05:612c:528d:b0:5f0:7082:45c8 with SMTP id z13csp3026989vqa;
+        Mon, 7 Sep 2026 00:15:57 -0700 (PDT)
+X-Received: by 2002:a17:907:fd17:b0:c26:1648:a069 with SMTP id a640c23a62f3a-c261648b781mr673534466b.36.1788765356886;
+        Mon, 07 Sep 2026 00:15:56 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1788765356; cv=pass;
+        d=google.com; s=arc-20260327;
+        b=JhRzMT3WIvhbYxfi4Ib3yXue3W+pV/vM2tD7KPayHz1FUIsFv0UT3/uDQhdEP16lAK
+         yE+6SjUzPqwOIVmMnmKKm/pirA3FhocEA42ITsqoPFKgabdBG+wuihRK2UbZCBdId8FL
+         wmb6RTFRHQvjBjGYPfB+fZXfz0Ag8RA92k54D7C9kaJ2zhxb80bxTwLBIi1kjRZFklyF
+         IabqOK3y01I/+zm5LobU9IjgRyz9jrTTroE9yKoLgNc3V/TPjSljdmBNqUD8xvgu6ZjH
+         KaxHn0uD3NCMoGkdiUYsJ2MdVMSWmcIqHcOec2rfJ8bYMnivuts56MDde7g0izcOMjz4
+         ZAWA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=VBkADWNzom14MCxZfydxCJyIzTBYaGk8DxKT1GcDISc=;
+        fh=k9/vxkJj5AePlUSs4gLt5rCn3HNb3Dt5R1zQ5IW/j2U=;
+        b=UWCJHhtpgPUMZpTuyW+lP6wFFxbD++fm8cKMXyTB7g6IEWreVSMWnSgmEcpkhPNiYz
+         OtdKpbgDVQ7ef7jSk0hd1ct27Vk2tOYI5db22R+gyced76zd8V7vRFTBj2dQ37JMLDed
+         OCZ0KL43lEp9t25hoWFovDFrx03ZH9Oom5rpckYCaiRlngFSPiFiSGKLpdOYtemhGVJr
+         RHz77aG4Eve23ryutswhst4EnrRKpxGuaXFTvTItXohuPj5fsoxVNUcU3PxUBYLEsPCB
+         y8YvMgAG0dLmoUd18noXDse0/HDhsxpUhyJ5ZXtf3mwvo4Wov2CtlE0NtoRRD0AYmGfu
+         +4wQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=qmcso11z;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of sudipta.ghosal@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sudipta.ghosal@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <sudipta.ghosal@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id a640c23a62f3a-c260d5bf149sor232122766b.13.2026.09.07.00.15.56
+        for <purbalihalder@gmail.com>
+        (Google Transport Security);
+        Mon, 07 Sep 2026 00:15:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of sudipta.ghosal@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=qmcso11z;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of sudipta.ghosal@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=sudipta.ghosal@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1788765356; cv=none;
+        d=google.com; s=arc-20260327;
+        b=B41AR6X7RAdfEGo5cjK+BjORky9S/YBrhsklmAOXUYf00zODQsacejQkpnCtd8xfmf
+         jgAwezXL0XvRPeAkwUW/v4zZwAbd2SLBxo0VSR2hfHIT+3k3EE/dAv7jUG8jVzCHSllZ
+         PGmHTXxfp0Y2niNVAAw7XcT4OG01BtzlCO7aao0jc66wJFlW5i6me6x6Q0eJrkvWtMj7
+         7AqsN4nSNV0b9QR9/7vyi1pxallEa4oRNg7kfhYhZ0y4miVGFjus/ofd/ikUKsKke2by
+         //Hf1XAkCQrpiw+2O44tD9bJ1UFXVm5+8vku8qGjj6c7smVC2HmXvxalT0/zdXVRNAlu
+         Mo2A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=VBkADWNzom14MCxZfydxCJyIzTBYaGk8DxKT1GcDISc=;
+        fh=k9/vxkJj5AePlUSs4gLt5rCn3HNb3Dt5R1zQ5IW/j2U=;
+        b=ffsf71GroEtfP/vncvIrp3PtO3gE6Ijd120YPeBEdHalTwk1bynRsIPDAPCx5w7QcG
+         tjYDzmV1eZZCseV/k1B+HhJlVqzpC3taphvAm3vW3c2zyfBqNO6RAvtlFYeaJJ1oiHQD
+         gEcKSooyyljyMaR3cJcEKolgRLjj0EcuyJsRAs2hopc88phouWA561H8lZPzkZW2d4W/
+         wx/VVpHF7pI1WF8mtyW/BvGwB4/kFpn+b3DKGGhn9Tt/6mJX7Sy5987AN7QvOcSkdQ6P
+         cc3PPQfSaLl3dWeb/4UiiVAp6nRp+7b4ZPnbYwUrnhqktIOwUVPUQd72uF51pV+Tu1un
+         7cdw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1788765356; x=1789370156; dara=google.com;
+        h=content-type:to:subject:message-id:date:from:mime-version:from:to
+         :cc:subject:date:message-id:reply-to:content-type;
+        bh=VBkADWNzom14MCxZfydxCJyIzTBYaGk8DxKT1GcDISc=;
+        b=qmcso11zU/JHhl0oVBSLmSrMr/4uSTiMrkRSdtPauW+yYA4tR5df12tF7lMtQLDB2Y
+         go3zt9QlUMZAaqCLNyqIfQtJsTr/JN7SDyO6mTt3jL/YtOdKgOnRk7wc0f8G8EXoGj3/
+         WblIeTr8Py9hY7EN7TJfz8Sa9lriba4orLmimquL1nXkh6NGh8OLEFVQjKhYdclf0yq+
+         7GRrtvUgr2kQrkmg5fhBylFKn2++c1X435IREtondBel8628yhSgvEE7WLDzuRisoA6Q
+         vAt6J8WLy8HUM8dTIzj/fLsbIWFjmfaEnA7OORz9G/U8XLQYA+kVB52cvgpt0hFi+sJJ
+         YLCQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1788765356; x=1789370156;
+        h=content-type:to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=VBkADWNzom14MCxZfydxCJyIzTBYaGk8DxKT1GcDISc=;
+        b=Nxp2B/4kPDh0cvKuKHlJoTX4+KYVXekIDlF7tDcpP67eXkhFAB7FuoPCDWWysmjsT3
+         wDyXdQRs8e5wR+w2c/KYgXyYJQSYdyzpL24Xs2zHgdP7PPdiEyImL8O5ooTDSd3gorPb
+         mhSHkvERyPx2Vs6WKm+eDPYW51fAyc7gWpYdr8pNwFt9rhjlOqS3PGqwxabFY3sO/ZRZ
+         8dZKp7UiDtxq+TL15HcZUoO3QRu+pv49oTsJO7RVYiQROhl1WFBjv4hQQxh2mjQ0rhpf
+         9jV9uIhCwEo3pPlWdQAock4dcxrSiETv13urUiRWHZaNsM5KWOn6yur6fevu3lJaGx4a
+         cvvA==
+X-Gm-Message-State: AFuF++mlHOPOOdlki17c8Nybw2Qtbi7tskenXvn/J2y9yQP/S6opKt4W
+	OO7yVxCqGKunFCcsyqH74A1M6cxlOiddNavtnLnnupqpEHypPM5AtsoRH1zB/pJ4MPmt8pIavv6
+	uqn7OcWPrtgvsCmjih2vUUcAUjGte52f6B31MgYY=
+X-Gm-Gg: AYBFou1ZtesmfNQB9lYnHKee2McZFFPnLx/j9qzG0qUGvFwk1JNJ/2M4R0nlGUdSL6O
+	/CsQyJ/KMBuk0EFRyKPfIbCD67FUcv8I2Iwimy62yTpKTmSK9stilNFyqppA5lUqDuTAm9wzeen
+	DwRT/QJdXIDET62S7siWTsZ/DVyuc5t9J9EDRNEKeNC0vSFGLuUBevXqXMphYenKDfjyN+6CXCD
+	3yzkpgoYwqIDL7+9lt8cFAyNxdK0LZFJjLGvpDt+KtYePvGKDvwbEEsX0hkCKVJ5ZCroJmDzQoe
+	DbXjaW19EB1HyoZh5gwxlsWaUq1QvZ1J5lgibre7nG3HATR1cK1mdICll6Ik5tCMsiuwiL/eOAJ
+	o
+X-Received: by 2002:a05:6402:24d0:b0:6a7:ea53:f61a with SMTP id
+ 4fb4d7f45d1cf-6a7ea540a39mr5011296a12.25.1788765356003; Mon, 07 Sep 2026
+ 00:15:56 -0700 (PDT)
+MIME-Version: 1.0
+From: "Dr. Sudipta Kr. Ghosal" <sudipta.ghosal@gmail.com>
+Date: Mon, 7 Sep 2026 12:45:43 +0530
+X-Gm-Features: AcwNN1WWaaMx7hAvbBHLiRDANtvBIGlqImLE92cw68_ZA6DMzAtWYCLxdQ-T-3Y
+Message-ID: <CAN2+OsLo7DoxqFHjodsRzDN3hQHMPkegKCbbWpk+pQ7mP9RpdA@mail.gmail.com>
+Subject: 
+To: "purbalihalder@gmail.com" <purbalihalder@gmail.com>
+Content-Type: multipart/mixed; boundary="000000000000a1e131065adf63bf"
+
+--000000000000a1e131065adf63bf
+Content-Type: multipart/alternative; boundary="000000000000a1e130065adf63bd"
+
+--000000000000a1e130065adf63bd
+Content-Type: text/plain; charset="UTF-8"
+
+-- 
+*(Dr. Sudipta Kr Ghosal) *
+*Lecturer in Computer Software Technology*
+*HOD, Department of Cyber Forensics and Information Security*
+*Behala Government Polytechnic*
+
+--000000000000a1e130065adf63bd
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><br clear=3D"all"></div><div><br></div><span class=3D=
+"gmail_signature_prefix">-- </span><br><div dir=3D"ltr" class=3D"gmail_sign=
+ature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div dir=3D=
+"ltr"><div><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"l=
+tr"><div dir=3D"ltr"><div dir=3D"ltr"><font face=3D"arial narrow, sans-seri=
+f"><b style=3D"font-size:12.8px"><font size=3D"4">(Dr. Sudipta Kr Ghosal)=
+=C2=A0</font></b><br></font></div><div dir=3D"ltr"><b><span style=3D"font-s=
+ize:12.8px"><font face=3D"arial narrow, sans-serif">Lecturer in Computer So=
+ftware Technology</font></span></b></div><div dir=3D"ltr"><b><span style=3D=
+"font-size:12.8px"><font face=3D"arial narrow, sans-serif">HOD, Department =
+of Cyber Forensics and Information Security</font></span></b></div><div><b>=
+<font face=3D"arial narrow, sans-serif">Behala Government Polytechnic</font=
+></b></div><div dir=3D"ltr"><br><br><br><br><br><br><br><br><br><br><br><br=
+><br><br><br><br><br></div></div></div></div></div></div></div></div></div>=
+</div></div></div>
+
+--000000000000a1e130065adf63bd--
+--000000000000a1e131065adf63bf
+Content-Type: message/rfc822; name="Dear Lucky Winner  .eml"
+Content-Disposition: attachment; filename="Dear Lucky Winner  .eml"
+Content-ID: <f_mtqwp3w50>
+X-Attachment-Id: f_mtqwp3w50
+
+Received: by 2002:a05:6400:214f:b0:2dc:94df:68e2 with SMTP id c15csp1643818ecc;
+        Fri, 21 Aug 2026 13:46:47 -0700 (PDT)
+Received: from mx3.digi.com.my (mx3.digi.com.my. [116.197.25.112])
+        by mx.google.com with ESMTPS id d2e1a72fcca58-851d34cbb60si13308389b3a.153.2026.08.21.13.46.37
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Fri, 21 Aug 2026 13:46:47 -0700 (PDT)
+Received: from vds1241855.hosted-by-itldc.com (HELO [192.168.8.200]) ([185.14.30.84])
+  by mx3.digi.com.my with ESMTP; 22 Aug 2026 02:40:43 +0800
+From: Nicolai Gustav <ct@digi.com.my>
+To: Recipients <ct@digi.com.my>
+Subject: Dear Lucky Winner  
+Thread-Topic: Dear Lucky Winner  
+Thread-Index: AW5mNCQw40KpkrrnAGr+oAkF26h+jw==
+X-MS-Exchange-MessageSentRepresentingType: 1
+Date: Fri, 21 Aug 2026 18:40:33 +0000
+Message-ID: <0f390a$c4gf2n@mx3.digi.com.my>
+Reply-To: "Lottery_entries@fifaworldcuplottery.com"
+	<Lottery_entries@fifaworldcuplottery.com>
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+received-spf: None (mx3.digi.com.my: no sender authenticity  information
+ available from domain of  postmaster@[192.168.8.200]) identity=helo;
+  client-ip=185.14.30.84; receiver=mx3.digi.com.my;
+  envelope-from="ct@digi.com.my";  x-sender="postmaster@[192.168.8.200]";
+ x-conformance=spf_only
+Content-Type: text/plain; charset="utf-8"
+Content-ID: <D45DF8F06CD1DF4DA9E39939644C65AC@1>
+Content-Transfer-Encoding: base64
+MIME-Version: 1.0
+
+DQoNCg0KRklGQSBXT1JMRCBDVVAgMjAyNiBMT1RURVJZDQoNCkxPVFRFUlkgUFJPTU9USU9OIENF
+TlRFUg0KDQpGSUZBLVN0cmFzc2UgMjAsIDgwNDQgWnVyaWNoLCBTd2l0emVybGFuZC4NCg0KRGVh
+ciBMdWNreSBXaW5uZXIgLA0KDQpDT05HUkFUVUxBVElPTlMgOiBUaGlzIGlzIHRvIGluZm9ybSB5
+b3UgdGhhdCB5b3VyIGVtYWlsIGFkZHJlc3MgZW1lcmdlZCBhcyBhIHdpbm5lciBvZiBhbiBhbW91
+bnQgVVMkMiw1MDAsMDAwLjAwIChUd28gTWlsbGlvbiBGaXZlIEh1bmRyZWQgVGhvdXNhbmQgVW5p
+dGVkIFN0YXRlcyBEb2xsYXJzICkgaW4gdGhlIGp1c3QgY29uY2x1ZGVkIEZJRkEgV09STEQgQ1VQ
+IDIwMjYgUFJPTU9USU9OIERyYXcgaGVsZCBpbiBaVVJJQ0ggU1dJVFpFUkxBTkQgdGhyb3VnaCBh
+biBvcGVuIGNvbXB1dGVyIGJhbGxvdCBKQVZBIHN5c3RlbSAuIFRoaXMgcHJvbW90aW9uYWwgTG90
+dGVyeSBkcmF3cyBzcG9uc29yZWQgYnkgdGhlIDIwMjYgRklGQSBXT1JMRCBDVVAgb2ZmaWNpYWwg
+cGFydG5lcnMgTUlDUk9TT0ZULCBBRElEQVMgLCBBUkFNQ08sIENPQ0EtQ09MQSBBbmQgQURJIFBy
+ZWRpY3N0cmVldCByZXNwZWN0ZnVsbHkgdG8gZ2l2ZSBiYWNrIGFuZCBzdXBwb3J0IGZhbWlsaWVz
+IG9mIEZvb3RiYWxsIGFuZCBzcG9ydCBmYW5zIFdvcmxkd2lkZS4NCg0KQWxsIHBhcnRpY2lwYW50
+cyBlbWFpbCB3YXMgYXV0b21hdGljYWxseSBlbnRlcmVkIGluIHRoZSBkcmF3IGFzIE1pY3Jvc29m
+dCBjb2xsZWN0ZWQgYWxsIHRoZSBhY3RpdmUgZW1haWwgdXNlcnMgZ2xvYmFsbHkgZm9yIHRoaXMg
+cHJvbW90aW9uIC4gWW91ciBlbWFpbCBhZGRyZXNzIGF0dGFjaGVkIHRvIFJFRkVSRU5DRSBOVU1C
+RVIgV0NCODAwMTAxMSB3YXMgbHVja2lseSBkcmF3biB0byB3aW4geW91IHRoZSBwcml6ZSBpbiB0
+aGUgY2F0ZWdvcnkgIkEiLCBUaGVyZWZvcmUgYSBwaW4gbnVtYmVyIGhhcyBiZWVuIGlzc3VlZCBm
+b3IgeW91IHRvIGNsYWltIHlvdXIgcHJpY2UgLiBQSU4gQ09ERSA6IDAwOTE4ODINCg0KSG93ZXZl
+ciB0aGVyZSBpcyBwcmVzZW50bHkgYSBDb3VudGVyLUNsYWltIG9uIHlvdXIgd2luaW5nIGZ1bmRz
+IHZhbHVlZCBhdCBVUyQyLDUwMCwwMDAuMDAgYnkgb25lIFJFQkVDQ0EgTk9SQS1DQU5FIChNUlMu
+KSwgd2hvIGlzIHByZXNlbnRseSB0cnlpbmcgdG8gbWFrZSB1cyBiZWxpZXZlIHRoYXQgeW91IGFy
+ZSBkZWFkIGFuZCBldmVuIGV4cGxhaW5lZCB0aGF0IHlvdSBlbnRlcmVkIGludG8gYW4gYWdyZWVt
+ZW50IHdpdGggaGVyIHRvIGhlbHAgeW91IGluIHJlY2VpdmluZyB5b3VyIGZ1bmRzLCBzbyBraW5k
+bHkgY29uZmlybSB0byB1cyA6IERpZCB5b3Ugc2lnbiBhbnkgRGVlZCBvZiBBc3NpZ25tZW50IGlu
+IGZhdm9yIG9mIFJFQkVDQ0EgTk9SQS1DQU5FKE1SUy4pIHRoZXJlYnkgbWFraW5nIGhlciB5b3Vy
+IFJlcHJlc2VudGF0aXZlIGFuZCBOZXh0IG9mIGtpbiB0byByZWNlaXZpbmcgeW91ciBmdW5kcyBv
+biB5b3VyIGJlaGFsZj8gUkVCRUNDQSBOT1JBLUNBTkUgKE1SUy4pIGhhcyBhbHNvIGdpdmVuIHVz
+IGEgc2Nhbm5lZCBDb3B5IE9mIGhlciBVbml0ZWQgU3RhdGVzIEludGVybmF0aW9uYWwgUGFzc3Bv
+cnQgYW5kIEJhbmsgQWNjb3VudCBpbmZvcm1hdGlvbiBmb3IgYSBxdWljayB0cmFuc2ZlciBvZiB5
+b3VyIGZ1bmRzLCB3aGlsZSB3ZSBhcmUgc3RpbGwgd2FpdGluZyBmb3IgeW91IHRvIHVyZ2VudGx5
+IGNvbmZpcm0gUkVCRUNDQSBOb3JhLWNhbmUncyBjbGFpbXMsIEkgd2FudCB0byBhZmZpcm0gdG8g
+eW91IHRoYXQgaWYgd2UgZG8gbm90IGhlYXIgZnJvbSB5b3Ugd2l0aGluIHRoZSBuZXh0IGZldyBX
+b3JraW5nIGRheXMgZnJvbSB0b2RheSwgd2Ugd2lsbCBhY2NlcHQgUkVCRUNDQSBOT1JBLUNBTkUg
+KE1SUy4pIGFzIGEgYmVuZWZpY2lhcnkgdG8geW91ciBmdW5kcyBhbmQgdHJhbnNmZXIgeW91ciBm
+dW5kcyB0byBoZXIgd2l0aG91dCBmdXJ0aGVyIG5lZ290aWF0aW9ucy4NCg0KVG8gZmlsZSBmb3Ig
+eW91ciBjbGFpbSwgWW91IGFyZSBhZHZpc2VkIHRvIGdldCBpdW4gY29udGFjdCB3aXRoIG91ciBD
+bGFpbXMgYWdlbnQgYXMgc3RhdGVkIGJlbG93IC4NCg0KQ0xBSU1TIE9GRklDRSA6IFpVUklDSCBT
+V0lUWkVSTEFORA0KDQpDb250YWN0IEFnZW50IDogTXJzIFNvcGhpYSBXZWJiZXINCg0KQ29udGFj
+dCBFbWFpbCA6IExvdHRlcnlfZW50cmllc0BmaWZhd29ybGRjdXBsb3R0ZXJ5LmNvbQ0KDQpHZXQg
+aW4gY29udGFjdCB3aXRoIHRoZSBhYm92ZSBtZW50aW9uZWQgb2ZmaWNlIGFuZCB0aGUgcmVxdWVz
+dGVkIGluZm9ybWF0aW9ucyBiZWxvdw0KDQoxLiBZb3VyIEZ1bGwgTmFtZXMNCg0KMi5Ib21lIEFk
+ZHJlc3MNCg0KMy4gU2V4DQoNCjQuIEFnZSAuDQoNCjUuQ29weSBvZiB5b3VyIElkZW50aWZpY2F0
+aW9uDQoNCjYuIE9jY3VwYXRpb24NCg0KNy5Nb2JpbGUgTnVtYmVyDQoNCjguIFdpbm5pbiBSZWZl
+cmVuY2UgTnVtYmVyDQoNCjkuUElOIENPREUNCg0KRGlzY2FpbWVyIDpJZiB0aGUgRW1haWwgSUQg
+ZG9lcyBub3QgYmVsb25nIHRvIHlvdSwgcGxlYXNlcyBkbyBub3QgcmVzcG9uZCBiZWNhdXNlIGZh
+bHNlIGFwcGxpY2F0aW9uIHdpbGwgYmUgcGVyc2VjdXRlZCBieSBsYXcuDQoNCiANCg0KIA0KDQpB
+bGwgcHJpemUgbW9uZXkgbXVzdCBiZSBjbGFpbWVkIG5vdCBsYXRlciB0aGFuIHRoZSAzMGRheXMu
+DQoNCllvdXJzIGZhaXRoZnVsbHksDQoNCk5pY29sYWkgR3VzdGF2DQoNCkZJRkEgV09STEQgQ1VQ
+IDIwMjYgTE9UVEVSWSAuDQoNCiAgICAgICAgICAgICAgICAgICAgICAgICAgWW91IG11c3QgYmUg
+MTYgb3Igb3ZlciB0byBwbGF5IG9yIGNsYWltIGEgcHJpemUNCg0KIA0KDQogICAgICAgICAgICAg
+Q29weXJpZ2h0IMKpIDIwMjYgVGhlIEZJRkEgV29ybGQgQ3VwIExvdHRlcnkgSW50ZXJuYXRpb25h
+bCBQcm9tb3Rpb24gSW5jLg0KDQogICAgICAgICAgICAgICAgICAgICAgICBhbGwgcmlnaHRzIHJl
+c2VydmVkLiBUZXJtcyBvZiBTZXJ2aWNlIOKAkyBHdWlkZWxpbmUuDQo=
+
+--000000000000a1e131065adf63bf--
